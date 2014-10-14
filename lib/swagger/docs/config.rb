@@ -22,7 +22,7 @@ module Swagger
 
         def register_apis(versions)
           base_api_controller.send(:include, ImpotentMethods)
-          @versions = versions
+          registered_apis.merge!(versions)
         end
 
         def registered_apis
